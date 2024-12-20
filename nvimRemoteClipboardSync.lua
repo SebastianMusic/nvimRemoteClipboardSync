@@ -1,8 +1,6 @@
-local clipboardGroup = vim.api.nvim_create_augroup("sebbe", { clear = true })
+local clipboardGroup = vim.api.nvim_create_augroup("clipboardGroup", { clear = true })
 local is_server = true
 local port = 2000
-
--- autocommadn to recieve yanked text
 
 local uv = vim.loop
 if is_server == true then
