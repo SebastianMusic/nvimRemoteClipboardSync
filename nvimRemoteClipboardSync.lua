@@ -27,7 +27,7 @@ if is_server == true then
 			elseif data then
 				vim.schedule(function()
 					vim.fn.setreg('"0', data)
-					vim.fn.system(string.format("echo %q | pbcopy ", data))
+					vim.fn.system(string.format("echo %s | pbcopy ", vim.fn.shellescape(data)))
 				end)
 			else
 				print("client disconnected")
